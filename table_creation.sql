@@ -2,8 +2,6 @@
 
 -- Use the ▷ button in the top right corner to run the entire file.
 
-SELECT * FROM "table-name";
-
 CREATE TABLE Publishers (
     Publisher_ID INTEGER NOT NULL PRIMARY KEY,
     Name TEXT NOT NULL
