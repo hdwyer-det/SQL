@@ -5,7 +5,8 @@
 -- 1: Best sellers.   Select game name, publisher name, quantity sold in descending order by quantity sold
 
 
--- 2: Hideo's games.   Select game name, quantity sold, cost, retail price in ascending order by retail price. Restrict to first name 'Hideo'
+
+-- 2: Hideo's games.   Select game name, quantity sold, cost, retail price in ascending order by retail price. Restrict to developer first name 'Hideo'
 
 
 -- 3: All games. Order by Publisher Name, Developer Surname, Game Name    Include columns: Publisher Name, Game Name, Developer Surname, Cost, Quantity Sold, Retail Price
