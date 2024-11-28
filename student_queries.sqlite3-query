@@ -1,9 +1,12 @@
+-- database: .\data_source.db
+
 -- Write and test your queries in the 'Query Editor'
 -- Then save them here
+-- You can run your queries by clicking the ▷ above a block of code to run just that block
+-- Or you can click the ▷ in the top right corner of the text editor to run everything in the file at once 
 
 
 -- 1: Best sellers.   Select game name, publisher name, quantity sold in descending order by quantity sold
-
 
 
 -- 2: Hideo's games.   Select game name, quantity sold, cost, retail price in ascending order by retail price. Restrict to developer first name 'Hideo'
@@ -16,6 +19,7 @@
 
 
 -- 5a: CHALLENGE.   Select game name and a calculated PROFIT field  (Use revenue as quantity * price)
+
 
 -- 5b: CHALLENGE.   Update the above query to be GROUPED BY Developer
 
