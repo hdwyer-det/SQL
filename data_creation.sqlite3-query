@@ -1,4 +1,5 @@
--- database: d:\OneDrive - NSW Department of Education\11 SW\VSCode\HomeLaptop\SQL\data_source.db
+-- database: .\data_source.db
+-- Use the ▷ button in the top right corner to run the entire file.
 
 -- We need to create data in publishers and developers first
 -- This is because the data in games has foreign keys to those tables
