@@ -1,0 +1,49 @@
+-- database: .\data_source.db
+
+-- Write and test your queries here
+-- You can run your queries by clicking the ▷ above a block of code to run just that block
+-- Or you can click the ▷ in the top right corner of the text editor to run everything in the file at once 
+
+
+-- 1: Best sellers.   Select game name, publisher name, quantity sold in descending order by quantity sold
+SELECT Games.Name, Publishers.Name, games.Quantity_Sold
+FROM Games, Publishers
+WHERE games.Publisher_ID = Publishers.Publisher_ID
+ORDER BY games.Quantity_Sold DESC;
+
+-- 2: Hideo's games.   Select game name, quantity sold, cost, retail price in ascending order by retail price. Restrict to developer first name 'Hideo'
+SELECT Games.Name, games.Quantity_Sold, games.Retail_Price
+FROM Games, Developers
+WHERE games.Developer_ID = Developers.Developer_ID
+  AND Developers.First_Name = "Hideo"
+ORDER BY games.Retail_Price ASC;
+
+
+-- 3: All games. Order by Publisher Name, Developer Surname, Game Name    
+-- Include columns: Publisher Name, Game Name, Developer Surname, Cost, Quantity Sold, Retail Price
+SELECT Publishers.Name AS "Publisher Name", Developers.Last_Name AS "Developer Name", Games.Name AS "Game Name", Games.Quantity_Sold, games.Retail_Price
+FROM Games, Publishers, Developers
+WHERE games.Publisher_ID = Publishers.Publisher_ID
+  AND games.Developer_ID = Developers.Developer_ID;
+
+-- 4: Total cost grouped by publisher.  Order by Publisher Name
+SELECT Publishers.name, SUM(games.Cost)
+FROM Games, Publishers
+WHERE games.Publisher_ID = Publishers.Publisher_ID
+GROUP BY Publishers.Publisher_ID
+ORDER BY Publishers.Name;
+
+-- 5a: CHALLENGE.   Select game name and a calculated PROFIT field  (Use revenue as quantity * price)
+SELECT name, ((Quantity_Sold * Retail_Price) - Cost) AS Profit 
+FROM Games;
+
+SELECT name, FORMAT("$%.2f", ((Quantity_Sold * Retail_Price) - Cost)) AS Profit 
+FROM Games;
+
+
+-- 5b: CHALLENGE.   Update the above query to be GROUPED BY Developer
+SELECT Developers.Last_Name, SUM(((Quantity_Sold * Retail_Price) - Cost)) AS Profit 
+FROM Games, Developers
+WHERE Games.Developer_ID = Developers.Developer_ID
+GROUP BY Developers.Developer_ID;
+
