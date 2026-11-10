@@ -7,9 +7,11 @@ The repository includes the following files:
 	• sample_queries    Queries to be demonstrated by the teacher
 	• student_queries    Requirements for queries to be written by students
 
-Students should download their own version of the code, unzip and then edit within VSCode
+Students should create their own version to edit and run by 'forking the repository' and then either:
+	• Opening in codespaces, OR
+	• Opening in an alternative IDE (e.g. Visual Studio Code)
 
-VS Code Extensions:
+If running in Visual Studio Code you will need the following Extensions:
  - yy0931.vscode-sqlite3-editor (https://marketplace.visualstudio.com/items?itemName=yy0931.vscode-sqlite3-editor)
 
   
