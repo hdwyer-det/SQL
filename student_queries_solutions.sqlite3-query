@@ -1,4 +1,4 @@
--- database: .\data_source.db
+-- database: data_source.db
 
 -- Write and test your queries here
 -- You can run your queries by clicking the ▷ above a block of code to run just that block

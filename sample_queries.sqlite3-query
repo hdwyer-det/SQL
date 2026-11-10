@@ -1,4 +1,4 @@
--- database: .\data_source.db
+-- database: data_source.db
 -- You can run the queries by clicking the ▷ above a block of code to run just that block
 
 -- select all games
